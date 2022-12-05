@@ -11,8 +11,5 @@ add_executable(${exec_name} ${src_files})
 
 #Libs linked to the executable
 target_link_libraries( ${exec_name}   	
-	$<BUILD_INTERFACE:developer_flags>	
-	gtest_main
+	$<BUILD_INTERFACE:developer_flags>		
 )
-
-#gtest_discover_tests(${exec_name})
