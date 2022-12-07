@@ -19,7 +19,7 @@ jobs:
         run: cmake ../
       - name: Run VS
         run: cmake --build ${{github.workspace}}/build --clean-first --config Release -j 4
-      #- name: Run Test
-      #  working-directory: ${{github.workspace}}/build
-      #  run: ctest --no-compress-output -T Test -C Release --output-on-failure
+      - name: Run Test
+        working-directory: ${{github.workspace}}/build
+        run: bin\Release\VS_OMP.exe
       - run: echo "This job's status is ${{ job.status }}."
