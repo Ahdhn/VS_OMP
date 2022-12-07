@@ -40,8 +40,8 @@ set(cxx_flags
 
 set(cuda_flags
     $<$<CXX_COMPILER_ID:GNU>:-Xcompiler -Wall -fopenmp -O3>
-	$<$<CXX_COMPILER_ID:Clang>:-Xcompiler -Wall -fopenmp -O3>
-	$<$<CXX_COMPILER_ID:MSVC>:-Xcompiler /std:c++17>
+	$<$<CXX_COMPILER_ID:Clang>:-Xcompiler -Wall -fopenmp -O3>	
+	$<$<CXX_COMPILER_ID:MSVC>:-Xcompiler "/openmp /std:c++17">	
     -Xcudafe=--display_error_number    
 	-lineinfo	
 	--expt-extended-lambda	
